@@ -1,0 +1,121 @@
+.note {
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.note:active {
+  cursor: grabbing;
+}
+
+.note-header {
+  position: relative;
+  flex-shrink: 0;
+  height: 24px;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.note-color-btn {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  opacity: 0.7;
+}
+
+.note-color-btn:hover {
+  opacity: 1;
+}
+
+.note-color-picker {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.note-color-swatch {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.note-color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.note-body {
+  flex: 1;
+  padding: 6px 8px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.note-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #333;
+  line-height: 1.4;
+}
+
+.note-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 60px;
+  border: none;
+  resize: none;
+  outline: none;
+  font: inherit;
+  color: #333;
+  line-height: 1.4;
+  background: transparent;
+  padding: 0;
+}
+
+.note-resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  border-radius: 0 0 4px 0;
+}
+
+.note-resize-handle:hover {
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}

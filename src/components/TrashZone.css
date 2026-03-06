@@ -1,0 +1,43 @@
+.trash-zone {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 120px;
+  height: 80px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(240, 240, 240, 0.9);
+  pointer-events: none;
+  transition: border-color 0.15s, background 0.15s;
+  z-index: 1000;
+}
+
+.trash-zone--active {
+  border-color: rgba(0, 0, 0, 0.35);
+  background: rgba(230, 230, 230, 0.95);
+}
+
+.trash-zone--hover {
+  border-color: #c62828;
+  background: rgba(255, 205, 210, 0.95);
+}
+
+.trash-zone-icon {
+  font-size: 28px;
+}
+
+.trash-zone-label {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.trash-zone--hover .trash-zone-label {
+  color: #c62828;
+}
